@@ -1,0 +1,36 @@
+attributetype ( 1.1.2.1.1 NAME 'idcat'
+  DESC 'Atribut clau numèric amb un identificador per a cada soci'
+  EQUALITY integerMatch
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.27
+  SINGLE-VALUE )
+
+attributetype ( 1.1.2.1.2 NAME 'sardanes'
+  DESC 'Atribut boleà que indica si el soci sap ballar sardanes'
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.7
+  SINGLE-VALUE)
+
+attributetype ( 1.1.2.1.3 NAME 'foto'
+  DESC 'Emmagatzema la foto del soci'
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.28
+  SINGLE-VALUE )
+
+attributetype ( 1.1.2.1.4 NAME 'lema'
+  DESC '200 caràcters màxim per emmagatzemar el lema del soci'
+  EQUALITY caseIgnoreMatch
+  SUBSTR caseIgnoreSubstringsMatch
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.15{10}
+  SINGLE-VALUE )
+
+attributetype ( 1.1.2.1.5 NAME 'twitter'
+  DESC 'Atribut de text de tipus IA5'
+  EQUALITY caseIgnoreMatch
+  SUBSTR caseIgnoreSubstringsMatch
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.15
+  SINGLE-VALUE )
+
+objectclass ( 1.1.2.2.1 NAME 'indepeOrgPerson'
+  DESC 'Persones indepe'
+  SUP inetOrgPerson
+  STRUCTURAL
+  MUST ( idcat $ sardanes $ foto $ lema $ twitter )
+  MAY ( ) )

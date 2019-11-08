@@ -1,0 +1,27 @@
+dn: idcat=1001,ou=socis,dc=pau,dc=cat
+changetype: modify
+add: objectclass
+objectclass: marchenaAccount
+-
+add: delictes
+delictes: Atropellar a dos policies
+-
+add: anyscomdemna
+anyscomdemna: 20
+-
+add: galeres
+galeres: FALSE
+
+dn: idcat=1002,ou=socis,dc=pau,dc=cat
+changetype: modify
+add: objectclass
+objectclass: marchenaAccount
+-
+add: delictes
+delictes: Malversació
+-
+add: anyscomdemna
+anyscomdemna: 10
+-
+add: galeres
+galeres: TRUE

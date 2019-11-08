@@ -1,0 +1,21 @@
+attributetype ( 1.1.2.1.6 NAME 'delictes'
+  DESC 'Atribut de text dels delictes'
+  EQUALITY caseIgnoreMatch
+  SUBSTR caseIgnoreSubstringsMatch
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.15 )
+
+attributetype ( 1.1.2.1.7 NAME 'anyscomdemna'
+  DESC 'Atribut numèric'
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.27 )
+
+attributetype ( 1.1.2.1.8 NAME 'galeres'
+  DESC 'Atribut booleà per dir si els han castigat per tal cosa'
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.7
+  SINGLE-VALUE)
+
+objectclass ( 1.1.2.2.2 NAME 'marchenaAccount'
+  DESC 'Barrets estranys'
+  SUP TOP
+  AUXILIARY
+  MUST ( delictes $ anyscomdemna $ galeres )
+  MAY ( ) )

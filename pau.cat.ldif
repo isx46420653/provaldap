@@ -1,0 +1,41 @@
+dn: dc=pau,dc=cat
+dc: pau
+description: Examen 2019 ldapserver dc=pau,dc=cat
+objectClass: dcObject
+objectClass: organization
+o: pau.cat
+
+dn: ou=socis,dc=pau,dc=cat
+ou: socis
+description: Socis de la organització
+objectclass: organizationalunit
+
+dn: idcat=1000,ou=socis,dc=pau,dc=cat
+objectclass: indepeOrgPerson
+cn: Pau
+sn: Martin
+idcat: 1000
+sardanes: TRUE
+foto: ///var/tmp/foto.jpg
+lema: Terrible exemple de l'adoctrinament realitzat per TV3
+twitter: @pau_martin
+
+dn: idcat=1001,ou=socis,dc=pau,dc=cat
+objectclass: indepeOrgPerson
+cn: Zacarias
+sn: Hernandez
+idcat: 1001
+sardanes: FALSE
+foto: ///var/tmp/foto.jpg
+lema: Nieto del generalísimo
+twitter: @zacarias_hernandez
+
+dn: idcat=1002,ou=socis,dc=pau,dc=cat
+objectclass: indepeOrgPerson
+cn: Laura
+sn: Perez
+idcat: 1002
+sardanes: FALSE
+foto: ///var/tmp/foto.jpg
+lema: Puigdemont el nostre president!
+twitter: @laura_perez
